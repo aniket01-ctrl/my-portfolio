@@ -2,6 +2,6 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
     resolve: {
-        dedupe: ['three']
+        dedupe: ['three']  // ensures three is bundled once
     }
 });
