@@ -1,8 +1,8 @@
 import './style.css'
 
 import * as THREE from 'three';
-import spaceImg from './assets/img.jpg';
-import tesseract from './assets/img2.jpg';
+import spaceImg from './assets/img2.jpg';
+import tesseract from './assets/img.jpg';
 
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
