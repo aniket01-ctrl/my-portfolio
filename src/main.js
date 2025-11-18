@@ -1,8 +1,9 @@
 import './style.css'
 
 import * as THREE from 'three';
-import spaceImg from './pexels-frank-cone-140140-3607542.jpg';
-import tesseract from './pexels-adrien-olichon-1257089-2387793.jpg';
+import spaceImg from './assets/img.jpg';
+import tesseract from './assets/img2.jpg';
+
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 const scene = new THREE.Scene();
