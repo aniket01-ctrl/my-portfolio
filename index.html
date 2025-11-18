@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Portfolio</title>
+</head>
+
+<body>
+
+  <canvas id="bg"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- HOME -->
+    <section class="section" id="home">
+      <div class="content-box">
+        <h1>Welcome</h1>
+        <p>Explore my portfolio and journey.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="content-box">
+        <h1>About Me</h1>
+        <p>I am <strong>Aniket Sakhare</strong>!</p>
+        <p>My domain is <strong>Cybersecurity</strong>.</p>
+        <p>I love space (hence the background), football, and learning new tech! also i love cars in general!</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="content-box">
+        <h1>Projects</h1>
+        <p>Some of my featured work</p>
+
+        <div class="project-card">
+          <p>
+            I made a portfolio website with a rotating cube — bizarre, I know
+            I used references for the 3JS part and asked ChatGPT only for neatness!
+          </p>
+
+          <p>
+            <a href="https://www.youtube.com/watch?v=Q7AOvWpIVHU&t=425s" target="_blank">
+              Tutorial I followed for Three.js →
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="content-box">
+        <h1>Contact</h1>
+        <p>Let's get in touch!</p>
+
+        <div class="social-icons">
+          <a href="https://github.com/aniket01-ctrl"><i class="fa-brands fa-github"></i></a>
+          <a href="https://x.com/sakhare_an40911?t=k80WomQMiGNqHmKYrSufiw&s=09"><i
+              class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/aniket297777?igsh=cHNpdGh4ZjluY21q"><i
+              class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!----For smooth transitions-->>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll(".section").forEach(sec => {
+      observer.observe(sec);
+    });
+  </script>
+
+  <script type="module" src="./src/main.js"></script>
+
+</body>
+
+</html>
